@@ -20,7 +20,7 @@ public class TLQCTest extends AbstractBenchmark {
 	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
 	@Test
 	public void testExercise1() throws IOException {
-		String logPath = "\"C:\\Users\\Tonis\\Google Drive\\Eclipse-GTX\\tlqctester\\src\\test\\resources\\exercise1.xes\"";
+		String logPath = "\"C:\\Users\\Tonis\\git\\ltlminer-tests\\src\\test\\resources\\exercise1.xes\"";
 		int counter = testHelper(logPath);
 		assertEquals(295, counter - 1);
 		;

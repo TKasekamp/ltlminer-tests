@@ -28,7 +28,7 @@ public class MinerTest extends AbstractBenchmark {
 
 	}
 
-	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 1)
+	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
 	@Test
 	public void testExercise1() {
 		ArrayList<RuleModel> result = miner.mineAll(log, FormulaUtil.formulas,
