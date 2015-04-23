@@ -1,0 +1,35 @@
+formula rule1( A: activity ) :=  { init or ?x}
+	activity == A;
+formula rule2( A: activity ) :=  { existence or F ?x}
+	<>(activity == A) ;
+formula rule3( A: activity  ) :=  {  absence 2 or !(F(?x & X(F?x)))}
+	! (  <>(((activity == A) /\ _O(activity == A)))  );
+formula rule4( A: activity , B: activity ) :=  { co-existence or (F?x) <-> (F?y)}
+	(<>(activity == A) <-> <>(activity == B));
+formula rule5( A: activity , B: activity ) :=  { responded existence or (F?x) -> (F?y)}
+	(<>(activity == A) -> <>(activity == B));
+formula rule6( A: activity , B: activity ) :=  { response or G(?x -> F?y)}
+	[]( (activity == A -> <>(activity == B)) );
+formula rule7( A: activity , B: activity ) :=  { precedence or ([!(?y) U ?x]) | !(G?y)}
+	( (activity != B _U activity == A) \/ [](activity != B) );
+formula rule8( A: activity , B: activity ) :=  { succession is response /\ precedence. or (G(?x -> F?y)) & (([!(?y) U ?x]) | !(G?y))}
+	 [](( (activity == A -> <>(activity == B)) /\ ( (activity != B _U activity == A) \/ [](activity != B) ) ));	
+formula rule9( A: activity , B: activity ) :=  { alternate response  or G(?x -> X([!(?x) U ?y])) }
+	[]( (activity == A -> _O( (activity != A _U activity == B) ) ) );
+formula rule10( A: activity , B: activity ) :=  { alternate precedence is precedence /\ []( B -> _O(precedence))  or (([!(?y) U ?x]) | !(G?y)) & (G(?y -> X(([!(?y) U ?x]) | !(G?y)))) }
+	 (( (activity != B _U activity == A) \/ [](activity != B) ) /\ []( (activity == B -> _O(( (activity != B _U activity == A) \/ [](activity != B) )))));		
+formula rule11( A: activity , B: activity ) :=  { alternate succession is alternate response /\ alternate precedence. or (G(?x -> X([!(?x) U ?y]))) & ((([!(?y) U ?x]) | !(G?y)) & (G(?y -> X(([!(?y) U ?x]) | !(G?y)))))}
+   ([]( (activity == A -> _O( (activity != A _U activity == B) ) ) ) /\ (( (activity != B _U activity == A) \/ [](activity != B) ) /\ []( (activity == B -> _O(( (activity != B _U activity == A) \/ [](activity != B) ))))));	
+formula rule12( A: activity , B: activity ) :=  { chain response }
+	[]( (activity == A -> _O(activity == B) ));
+formula rule13( A: activity , B: activity ) :=  { chain precedence }
+	[]( (_O(activity == B) -> activity == A  ));
+formula rule14( A: activity , B: activity ) :=  { chain succesion }
+	[]( (activity == A <-> _O(activity == B) ));
+formula rule15( A: activity , B: activity ) :=  { not co-existence }
+	!( (<>(activity == A) /\ <>(activity == B) ));
+formula rule16( A: activity , B: activity ) :=  { not succesion }
+	[]( (activity == A -> !(<> (activity == B) )));
+formula rule17( A: activity , B: activity ) :=  { not chain succesion }
+	[]( (activity == A -> _O(activity != B) ));
+				
