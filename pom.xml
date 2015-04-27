@@ -71,8 +71,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
 				<configuration>
-					<argLine>-Djub.consumers=CONSOLE,XML
-						-Djub.xml.file=target/benchmarks.xml</argLine>
+					<argLine>-Djub.consumers=CONSOLE,XML</argLine>
 				</configuration>
 			</plugin>
 		</plugins>
