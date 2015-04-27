@@ -13,17 +13,12 @@ import com.carrotsearch.junitbenchmarks.BenchmarkOptions;
 
 public class TLQCTest extends AbstractBenchmark {
 
-	/**
-	 * 
-	 * @throws IOException
-	 */
 	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
 	@Test
 	public void testExercise1() throws IOException {
 		String logPath = "\"C:\\Users\\Tonis\\git\\ltlminer-tests\\src\\test\\resources\\exercise1.xes\"";
 		int counter = testHelper(logPath);
 		assertEquals(295, counter - 1);
-		;
 	}
 
 	private int testHelper(String logPath) throws IOException {
