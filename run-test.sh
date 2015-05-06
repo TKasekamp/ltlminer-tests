@@ -37,3 +37,4 @@ mvn test -q -Dtest=TLQCTest#testlogt1000len15a10 -Djub.xml.file=results/tlqc/tes
 mvn test -q -Dtest=TLQCTest#testlogt1000len15a30 -Djub.xml.file=results/tlqc/testlogt1000len15a30.xml
 mvn test -q -Dtest=TLQCTest#testlogt1000len15a40 -Djub.xml.file=results/tlqc/testlogt1000len15a40.xml
 mvn test -q -Dtest=TLQCTest#testlogt1000len15a50 -Djub.xml.file=results/tlqc/testlogt1000len15a50.xml
+

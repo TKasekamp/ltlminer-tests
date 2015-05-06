@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-04-28T03:05:24.960-0700">
+
+	<testname classname="ee.tkasekamp.tlqctester.TLQCTest" name="testlogt200len15a20"
+		 benchmark-rounds="3" warmup-rounds="0"
+		 round-avg="249.995" round-stddev="1.124"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="0" gc-time="0"
+		 benchmark-time-total="749.969" warmup-time-total="0.016"
+		 threads="1"/>
+
+</benchmark-results>

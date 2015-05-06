@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-05-05T23:22:11.728-0700">
+
+	<testname classname="ee.tkasekamp.ltlminer.MinerTest" name="testlogt5000len15a20"
+		 benchmark-rounds="3" warmup-rounds="0"
+		 round-avg="1971.917" round-stddev="39.335"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="616" gc-time="668.332"
+		 benchmark-time-total="5915.75" warmup-time-total="0.015"
+		 threads="1"/>
+
+</benchmark-results>
