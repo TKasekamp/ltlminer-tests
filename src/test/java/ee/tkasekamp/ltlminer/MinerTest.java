@@ -233,5 +233,15 @@ public class MinerTest extends AbstractBenchmark {
 				0.0);
 		assertNotEquals(0, result.size());
 	}
+	
+	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+	@Test
+	public void testDetailIncident() throws Exception {
+		LTLMiner miner = new LTLMiner(false);
+		XLog log = XLogReader.openLog("C:/Users/Administrator/dev/logs/DetailIncidentActivity.xes");
+		ArrayList<RuleModel> result = miner.mineAll(log, FormulaUtil.formulas,
+				0.0);
+		assertNotEquals(0, result.size());
+	}
 
 }

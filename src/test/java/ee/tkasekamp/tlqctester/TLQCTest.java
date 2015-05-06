@@ -164,6 +164,14 @@ public class TLQCTest extends AbstractBenchmark {
 		int counter = testHelper(logPath);
 		assertNotEquals(1, counter);
 	}
+	
+	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+	@Test
+	public void testDetailIncident() throws IOException {
+		String logPath = "\"C:\\Users\\Administrator\\dev\\logs\\DetailIncidentActivity.xes\"";
+		int counter = testHelper(logPath);
+		assertNotEquals(1, counter);
+	}
 
 	private int testHelper(String logPath) throws IOException {
 
