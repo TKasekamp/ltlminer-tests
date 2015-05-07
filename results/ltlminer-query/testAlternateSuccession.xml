@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-05-07T00:38:05.181+0300">
+
+	<testname classname="ee.tkasekamp.ltlminer.QueryTest" name="testAlternateSuccession"
+		 benchmark-rounds="3" warmup-rounds="0"
+		 round-avg="16.94" round-stddev="0.935"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="41" gc-time="0.79"
+		 benchmark-time-total="50.821" warmup-time-total="0"
+		 threads="1"/>
+
+</benchmark-results>

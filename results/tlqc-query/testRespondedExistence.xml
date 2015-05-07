@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-05-07T23:59:24.128+0300">
+
+	<testname classname="ee.tkasekamp.tlqctester.TLQCQueryTest" name="testSingleQuery"
+		 benchmark-rounds="2" warmup-rounds="0"
+		 round-avg="5.647" round-stddev="0.059"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="0" gc-time="0"
+		 benchmark-time-total="11.295" warmup-time-total="0"
+		 threads="1"/>
+
+</benchmark-results>

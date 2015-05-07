@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-05-07T00:39:18.177+0300">
+
+	<testname classname="ee.tkasekamp.ltlminer.QueryTest" name="testChainPrecedence"
+		 benchmark-rounds="3" warmup-rounds="0"
+		 round-avg="5.37" round-stddev="0.508"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="20" gc-time="0.606"
+		 benchmark-time-total="16.109" warmup-time-total="0.001"
+		 threads="1"/>
+
+</benchmark-results>

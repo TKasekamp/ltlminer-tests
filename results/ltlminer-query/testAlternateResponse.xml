@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-05-07T00:36:54.923+0300">
+
+	<testname classname="ee.tkasekamp.ltlminer.QueryTest" name="testAlternateResponse"
+		 benchmark-rounds="3" warmup-rounds="0"
+		 round-avg="7.272" round-stddev="0.55"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="25" gc-time="0.745"
+		 benchmark-time-total="21.816" warmup-time-total="0"
+		 threads="1"/>
+
+</benchmark-results>

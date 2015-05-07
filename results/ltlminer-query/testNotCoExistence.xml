@@ -1,0 +1,11 @@
+<benchmark-results tstamp="2015-05-07T00:39:56.523+0300">
+
+	<testname classname="ee.tkasekamp.ltlminer.QueryTest" name="testNotCoExistence"
+		 benchmark-rounds="3" warmup-rounds="0"
+		 round-avg="6.229" round-stddev="0.839"
+		 gc-avg="0" gc-stddev="0"
+		 gc-invocations="20" gc-time="0.766"
+		 benchmark-time-total="18.686" warmup-time-total="0"
+		 threads="1"/>
+
+</benchmark-results>
