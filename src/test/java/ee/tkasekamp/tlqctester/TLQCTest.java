@@ -20,7 +20,15 @@ public class TLQCTest extends AbstractBenchmark {
 		int counter = testHelper(logPath);
 		assertEquals(295, counter - 1);
 	}
-
+	
+	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+	@Test
+	public void testFinancial() throws IOException {
+		String logPath = "\"C:\\Users\\Administrator\\dev\\logs\\financial_log.xes\"";
+		int counter = testHelper(logPath);
+		assertNotEquals(1, counter);
+	}
+	
 	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
 	@Test
 	public void testlogt100len15a20() throws IOException {

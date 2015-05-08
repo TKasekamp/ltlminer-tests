@@ -33,6 +33,17 @@ public class MinerTest extends AbstractBenchmark {
 		assertEquals(295, result.size());
 	}
 
+	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+	@Test
+	public void testFinancial() throws Exception {
+		LTLMiner miner = new LTLMiner(false);
+		XLog log = XLogReader
+				.openLog("C:/Users/Administrator/dev/logs/financial_log.xes");
+		ArrayList<RuleModel> result = miner.mineAll(log, FormulaUtil.formulas,
+				0.0);
+		assertNotEquals(0, result.size());
+	}
+	
 	// Trace number changes 100 - 7000
 	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
 	@Test
