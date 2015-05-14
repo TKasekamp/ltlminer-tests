@@ -13,22 +13,22 @@ import com.carrotsearch.junitbenchmarks.BenchmarkOptions;
 
 public class TLQCTest extends AbstractBenchmark {
 
-	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+	@BenchmarkOptions(benchmarkRounds = 1, warmupRounds = 0)
 	@Test
 	public void testExercise1() throws IOException {
 		String logPath = "\"C:\\Users\\Tonis\\git\\ltlminer-tests\\src\\test\\resources\\exercise1.xes\"";
 		int counter = testHelper(logPath);
 		assertEquals(295, counter - 1);
 	}
-	
-	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+
+	@BenchmarkOptions(benchmarkRounds = 1, warmupRounds = 0)
 	@Test
 	public void testFinancial() throws IOException {
-		String logPath = "\"C:\\Users\\Administrator\\dev\\logs\\financial_log.xes\"";
+		String logPath = "\"C:\\Users\\Tonis\\Downloads\\logs\\financial_log.xes\"";
 		int counter = testHelper(logPath);
 		assertNotEquals(1, counter);
 	}
-	
+
 	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
 	@Test
 	public void testlogt100len15a20() throws IOException {
@@ -172,12 +172,29 @@ public class TLQCTest extends AbstractBenchmark {
 		int counter = testHelper(logPath);
 		assertNotEquals(1, counter);
 	}
-	
-	@BenchmarkOptions(benchmarkRounds = 3, warmupRounds = 0)
+
+	@BenchmarkOptions(benchmarkRounds = 1, warmupRounds = 0)
 	@Test
 	public void testDetailIncident() throws IOException {
-		String logPath = "\"C:\\Users\\Administrator\\dev\\logs\\DetailIncidentActivity.xes\"";
+		String logPath = "\"C:\\dev\\logs\\DetailIncidentActivity\\DetailedIncidentActivity.xes\"";
 		int counter = testHelper(logPath);
+		assertNotEquals(1, counter);
+	}
+
+	@BenchmarkOptions(benchmarkRounds = 1, warmupRounds = 0)
+	@Test
+	public void testHospital() throws IOException {
+		String logPath = "\"C:\\Users\\Tonis\\Downloads\\hospital_log.xes\"";
+		int counter = testHelper(logPath);
+		assertNotEquals(1, counter);
+	}
+
+	@BenchmarkOptions(benchmarkRounds = 1, warmupRounds = 0)
+	@Test
+	public void testBPI2013() throws IOException {
+		String logPath = "\"C:\\dev\\logs\\bpi_challenge_2013_incidents.xes\"";
+		int counter = testHelper(logPath);
+		System.out.println(counter);
 		assertNotEquals(1, counter);
 	}
 
@@ -197,7 +214,7 @@ public class TLQCTest extends AbstractBenchmark {
 			if (line == null) {
 				break;
 			}
-			// System.out.println(line);
+			System.out.println(line);
 			counter++;
 		}
 		return counter;
